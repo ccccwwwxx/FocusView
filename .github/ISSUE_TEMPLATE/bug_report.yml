@@ -1,0 +1,56 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. **If this is a security vulnerability, do NOT open a public issue — use GitHub Security Advisories instead.**
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Affected Website URL
+      description: The webpage where the bug occurred (if applicable).
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Extension Mode
+      options:
+        - Safe Default Mode (CSS-only)
+        - Advanced Dangerous Mode (JS enabled)
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs / Screenshots
+      description: Paste local audit log entries or screenshots if available.
+  - type: markdown
+    attributes:
+      value: |
+        **Privacy reminder:** Do not paste API keys, passwords, or sensitive DOM content.

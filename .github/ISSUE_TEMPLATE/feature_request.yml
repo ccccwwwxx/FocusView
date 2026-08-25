@@ -1,0 +1,39 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature. If your proposal affects the **security baseline, data flow, or governance**, please also read [GOVERNANCE.md](../../GOVERNANCE.md) — such changes require public review.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What user need does it address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe how you think the feature should work.
+    validations:
+      required: true
+  - type: dropdown
+    id: security-impact
+    attributes:
+      label: Security / Privacy Impact
+      description: Does this feature touch the safety baseline, data flow, or code execution?
+      options:
+        - "No — pure UI/UX or documentation"
+        - "Yes — affects security baseline (requires dual review)"
+        - "Unsure"
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative solutions or features you've considered.

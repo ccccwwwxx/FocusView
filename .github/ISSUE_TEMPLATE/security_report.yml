@@ -1,0 +1,45 @@
+name: Security Report
+description: Report a security vulnerability or baseline violation
+title: "[Security] "
+labels: ["security"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Sensitive Security Issue
+
+        If the vulnerability could be exploited in the wild, **please report it privately via [GitHub Security Advisories](https://github.com/ccccwwwxx/FocusView/security/advisories/new)** instead of this public form.
+
+        Use this form only for baseline violations, design concerns, or non-exploitable issues that benefit from public discussion per the project's public supervision principle.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Report Type
+      options:
+        - Safety baseline violation (e.g., JS execution enabled by default)
+        - Data leak / privacy concern (e.g., DOM data uploaded without consent)
+        - Desensitization bypass (e.g., password fields not filtered)
+        - CSP violation / remote code loading
+        - Audit log issue
+        - Other security concern
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Detail the security issue, its potential impact, and how it violates the public safety baseline.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction Steps
+      description: How can the issue be observed?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Fix
+      description: If you have a proposed remediation, describe it here.
